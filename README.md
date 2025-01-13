@@ -19,7 +19,7 @@ Python implementation of the brainf*ck interpreter first published by Urban Mül
 - `.` Output the character signified by the cell at the pointer
 - `,` Input a character and store it in the cell a the pointer
 - `[` Jump past the matching `]`if the cell at the pointer is `0`
-- `]` Jump back to the matching `]` if the cell at the pointer is nonzero
+- `]` Jump back to the matching `[` if the cell at the pointer is nonzero
 
 Any other characters are considered to be comments and ignored.
 
