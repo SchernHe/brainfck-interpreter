@@ -1,4 +1,4 @@
-"""Implementation of the brainf*ck interpreter."""
+"""Entrypoint for the brainf*ck interpreter."""
 
 import click
 
