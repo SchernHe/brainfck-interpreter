@@ -1,13 +1,17 @@
 """Implementation of the brainf*ck interpreter."""
 
+import click
 
-def interpret_command(bfk_cmd: str) -> str:
-    """Interpret the brainf*ck command sequence.
+
+@click.command()
+@click.option("--file_path", prompt="Brainf*ck file path")
+def interpret_command(file_path: str) -> str:
+    """Entrypoint to interpret a brainf*ck command sequence from file.
 
     Parameters
     ----------
-    bfk_cmd : str
-        Brainf*ck command sequence.
+    file_path : str
+        Path containing the Brainf*ck command sequence.
 
     Returns
     -------
