@@ -1,0 +1,34 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff-format
+        entry: poetry run ruff format
+        require_serial: true
+        language: system
+        types: [python]
+      - id: ruff
+        name: ruff-check
+        entry: poetry run ruff check
+        require_serial: true
+        language: system
+        types: [python]
+      - id: poetry-check
+        name: poetry check
+        entry: poetry check
+        language: system
+        files: pyproject.toml
+        pass_filenames: false
+      - id: poetry-lock-check
+        name: poetry lock check
+        entry: poetry check
+        args: [--lock]
+        language: system
+        pass_filenames: false
+      - id: mypy
+        name: mypy
+        entry: poetry run mypy brainfck_interpreter
+        pass_filenames: false
+        files: '^src(/[^/]*)*/[^/]*\.py$'
+        language: system
+
