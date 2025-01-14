@@ -5,7 +5,7 @@ from typing import List
 
 
 logger = logging.getLogger(__file__)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 VALID_VOCABULARY: List[str] = [">", "<", "+", "-", ".", ",", "[", "]"]
 

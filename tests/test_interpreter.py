@@ -4,6 +4,7 @@ from brainfck_interpreter.interpreter import BFInterpreter
 
 @pytest.fixture(scope="function")
 def interpreter():
+    """Provide an instance of the interpreter fixture."""
     yield BFInterpreter(128)
 
 
@@ -63,6 +64,7 @@ class TestInterpretation:
         cmd_sequence = ["-", "[", "-", ">", "+", "<", "]", "-"]
 
         interpreter.ip = 6
+        interpreter.loop_open = True
         interpreter.jump_backwards(cmd_sequence)
 
         assert interpreter.ip == 1
