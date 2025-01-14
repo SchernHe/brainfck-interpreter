@@ -27,7 +27,7 @@ repos:
         pass_filenames: false
       - id: mypy
         name: mypy
-        entry: poetry run mypy src
+        entry: poetry run mypy brainfck_interpreter
         pass_filenames: false
         files: '^src(/[^/]*)*/[^/]*\.py$'
         language: system
